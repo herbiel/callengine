@@ -6,6 +6,7 @@
 @Author  ：herbiel8800@gmail.com
 @Date    ：2022/1/18 11:24 上午 
 '''
+from subprocess import call
 import celery
 import time
 from celery.utils.log import get_task_logger
