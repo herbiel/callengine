@@ -1,0 +1,1 @@
+celery -A engine worker -l debug -c 4

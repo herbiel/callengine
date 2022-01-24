@@ -16,8 +16,8 @@ from engine.Freeswitch import command
 
 
 @app.task
-def outbound(number):
-    call_cmd = 'originate sofia/internal/sip:%s@192.168.50.16:5080 sleep:5000,hangup inline'%number
+def outbound(number,uuid):
+    call_cmd = 'originate {origination_uuid=%s}sofia/internal/sip:%s@192.168.50.16:5080 sleep:5000,hangup inline'%(uuid,number)
     res = command(call_cmd)
     return res
 
